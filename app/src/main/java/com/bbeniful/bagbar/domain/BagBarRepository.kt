@@ -28,7 +28,6 @@ class BagBarRepositoryImpl: BagBarRepository {
         get() = _bagBarStatus.asSharedFlow()
 
     override fun add() {
-        Log.e("added", "called")
         CoroutineScope(Dispatchers.Main).launch {
             _bagBarStatus.emit(BagBarStatus.ITEM_ADDED)
             delay(1000)

@@ -26,10 +26,8 @@ class BagBarViewModel(
     }
 
     private fun listenBagBarStateChange() {
-        Log.e("listen to change","listen")
         viewModelScope.launch {
             bagBarRepository.bagBarStatus.collect { state ->
-                Log.e("state->", state.name)
                 when(state) {
                     BagBarStatus.ITEM_ADDED -> {
                         updateText(R.string.added)
