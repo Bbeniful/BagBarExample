@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BagBar</string>
+
+    <string name="added">Item added</string>
+    <string name="checkout">Checkout now</string>
+</resources>
